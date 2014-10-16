@@ -6,12 +6,12 @@ public class Calculator {
 		if(text.equals("")){
 			return 0;
 		}
-		else if(text.contains(",\n")){
+		else if(text.contains(",")){
 			return sum(splitNumbers(text));
 		}
-		//else if(test.contains("\n")){
-			//return sum(splitNumbers(text));
-		//}
+		else if(test.contains("\n")){
+			return sum(splitNumbers(text));
+		}
 		else
 			return 1;
 	}
