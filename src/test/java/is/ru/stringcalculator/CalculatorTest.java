@@ -6,8 +6,8 @@ import org.junit.Test;
 public class CalculatorTest {
 
 	public static void main(String args[]) {
-      org.junit.runner.JUnitCore.main("is.ru.stringcalculator.CalculatorTest");
-    }
+      		org.junit.runner.JUnitCore.main("is.ru.stringcalculator.CalculatorTest");
+    	}
 
 	@Test
 	public void testEmptyString() {
@@ -22,7 +22,7 @@ public class CalculatorTest {
 	@Test
 	public void testTwoNumbers() {
 		assertEquals(3, Calculator.add("1,2"));
-	}	
+	}
 
 	@Test
    	public void testMultipleNumbers(){
@@ -34,5 +34,14 @@ public class CalculatorTest {
     		assertEquals(6, Calculator.add("1\n2,3"));
     	}
 
+	@Test
+	public void testChangeTheDelimiter(){
+		assertEquals(3, Calculator.add("//;\n1;2"));
+	}
+
+	@Test
+	public void testNumberBiggerThen1000(){
+		assertEquals(2, Calculator.add("1001,2"));
+	}
 
 }
