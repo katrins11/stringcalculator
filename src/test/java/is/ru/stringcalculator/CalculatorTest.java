@@ -57,8 +57,13 @@ public class CalculatorTest {
 	}
 
 	@Test
-        public void testDelimitersAtAnyLength(){
+        public void testDelimitersAtAnyLength()throws NegativeNumbException{
                 assertEquals(6, Calculator.add("//[***]\n1***2***3"));
 	}
 
+	@Test
+	public void testDelimitersAtAnyLength()throws NegativeNumbException{
+		assertEquals(6, Calculator.add("//[*][%]\n1*2%3"));
+
+	}
 }
